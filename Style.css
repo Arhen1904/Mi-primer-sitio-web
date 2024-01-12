@@ -1,25 +1,33 @@
 html{
-    overflow: hidden;
+    
 }
-.titulo{
-    position: sticky;
-    text-shadow: 3px 3px 5px rgb(0, 0, 0);
-    color: rgb(232, 187, 125);
-    margin-left: 20px;
-    margin-top: 10px;
-}
+
 body{
-    display: grid;
+    margin: 0;
     min-height: 100vh;
-    font-family:'Playfair Display';
+    min-width: 100vw;
     background-image: url('img/Fondo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment:scroll;
-    background-color: white;
+}
+.titulo{
+    font-size: 2vw;
+    text-shadow: 3px 3px 5px rgb(0, 0, 0);
+    color: rgb(232, 187, 125);
+    padding-left: 3vw;
+}
+
+h1{
+    color: rgb(170 230 255);
+    font-size: 32px;
+}
+main{
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    font-family:'Playfair Display';
     color: rgb(255, 255, 255);
-    
 }
 
 .parrafo{
@@ -33,10 +41,10 @@ img {
     border-style: ridge;
     border-radius: 55%;
     width: 370px;
-    transition: all 5s ease;
-    animation: float 10s infinite alternate;
+    transition: all 2s ease;
+    animation: float 50s infinite alternate;
 }
-  
+
 @keyframes float {
     0% {
       transform: translate(0, 0);
@@ -70,14 +78,7 @@ img {
 img:hover {
     box-shadow: 10px 10px 200px rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
-    transform: scale(1.1);
-    animation: none; 
-}
-  
-img:hover {
-    box-shadow: 10px 10px 200px rgb(255, 255, 255);
-    border-color: rgb(255, 255, 255);
-    transform: scale(1.04);
+    transform: scale(0.1);
 }
 .contenedor {
     display: flex;
