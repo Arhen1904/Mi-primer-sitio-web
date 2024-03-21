@@ -1,41 +1,54 @@
-html{
-    
-}
-
 body{
     margin: 0;
-    min-height: 100vh;
-    min-width: 100vw;
     background-image: url('img/Fondo.jpg');
-    background-size: cover;
+    background-size: 100vw 100vh;
+    background-position: center top;
     background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment:scroll;
 }
 .titulo{
-    font-size: 2vw;
+    font-size: 20px;
     text-shadow: 3px 3px 5px rgb(0, 0, 0);
     color: rgb(232, 187, 125);
-    padding-left: 3vw;
+    margin-left: 9vw;
+}
+
+.principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    width: 85vw;
+    height: 90vh;
+    background-image: url(img/Fondo.jpg);
+    background-position: bottom center;
+    background-size: 100vw 102vh;
+    box-shadow: rgba(255, 255, 255, 0.462) 0 0 10px;
 }
 
 h1{
     color: rgb(170 230 255);
     font-size: 32px;
 }
-main{
+header{
     display: grid;
     grid-template-rows: 1fr 10fr;
     font-family:'Playfair Display';
     color: rgb(255, 255, 255);
+    width: 100vw;
+    height: 75vh;
+    box-shadow: inset rgba(0, 0, 0, 0.658) 0 0 10vw;
+    backdrop-filter: blur(6px);
+    
 }
+
 
 .parrafo{
     max-width: 450px;
     text-shadow: 3px 3px 5px black;   
 }
 
-img {
+.icono {
     box-shadow: 1px 1px 20px rgb(255, 222, 182);
     border-color: rgb(255, 222, 182);
     border-style: ridge;
@@ -75,25 +88,51 @@ img {
     }
 }
   
-img:hover {
+.icono:hover {
     box-shadow: 10px 10px 200px rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
     transform: scale(0.1);
 }
-.contenedor {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-h4{
+
+.pie{
     border-radius: 7px;
     background-color: rgba(62, 37, 15, 0.611);
     color: rgb(232, 187, 125);
     padding: 15px;
 }
-a{
-    color: rgb(167, 189, 209);
+
+main {
+    margin: 0;
+    background: linear-gradient(rgb(200, 200, 200) 20%, rgb(0, 0, 0));
+    width: 100vw;
+    height: 200vh;
+}
+
+.section-presentacion {
+    position: relative;
+    width: 100vw;
+    height: 150vh;
+    top: 25%;
+}
+
+
+.imagen-presentacion {
+    width: 80vw;
+    height: 100vh;
+    
+}
+
+.section-proyectos {
+    width: 85vw;
+    margin: 15vw auto 0 auto;
+}
+
+.h1-proyectos {
+    text-align: center;
+    text-shadow: white 2px 0 1px, black -2px 0 1px;
+    font-family: 'Playfair Display';
+    color: rgb(42, 42, 42);
+    font-size: 10vw;
 }
 
 @media (max-width: 500px) {

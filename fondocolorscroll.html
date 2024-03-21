@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Background Color</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 300vh;
+    }
+
+    .content {
+      padding: 20px;
+      background-color: #f0f0f0; /* Color de fondo inicial */
+      transition: background-color 0.5s ease; /* Transición suave entre colores */
+      height: 300vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+    <!-- Otro contenido -->
+  </div>
+  <script>
+    window.addEventListener('scroll', function() {
+      var scrollPosition = window.scrollY;
+      var backgroundColor;
+
+      // Definir los colores de fondo según la posición de desplazamiento
+      if (scrollPosition < 500) {
+        backgroundColor = 'blue';
+      } else if (scrollPosition < 1000) {
+        backgroundColor = 'green';
+      } else {
+        backgroundColor = 'red';
+      }
+
+      // Aplicar el color de fondo al elemento con la clase "content"
+      document.querySelector('.content').style.backgroundColor = backgroundColor;
+    });
+  </script>
+</body>
+</html>
