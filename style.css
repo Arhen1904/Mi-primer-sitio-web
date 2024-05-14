@@ -388,10 +388,6 @@ main {
     z-index: 0;
 }
 
-#section-proyectos-personales {
-    
-}
-
 #contenedor-proyectos-personales {
     width: 80vw;
     height: 280vh;
@@ -678,7 +674,6 @@ hr {
 }
 
 @media (max-width: 500px) {
-<<<<<<< HEAD:Style.css
     #section-presentacion {
         margin-top: 12vh;
     }
@@ -793,7 +788,3 @@ hr {
     }
 
 }
-=======
-      
-}
->>>>>>> d3b0a45f287c15bb40cd69650b0ac164c87ce7d8:style.css
