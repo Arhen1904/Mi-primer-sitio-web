@@ -2,7 +2,6 @@ body{
     margin: 0;
 }
 
-
 #principal {
     margin: 0 auto;
     width: 100vw;
@@ -21,14 +20,6 @@ header{
     height: 100vh;
     background: linear-gradient(rgb(215, 215, 215) 65%, rgb(136, 136, 136));
     background-attachment: fixed;
-
-}
-
-.pie{
-    border-radius: 7px;
-    background-color: rgba(62, 37, 15, 0.611);
-    color: rgb(232, 187, 125);
-    padding: 15px;
 }
 
 main {
@@ -36,18 +27,23 @@ main {
     background: linear-gradient(rgb(215, 215, 215) 65%, rgb(136, 136, 136));
     background-attachment: fixed;
     background-size: 100vh;
-    display: grid;
-    grid-template-rows: 0.19fr 2fr 5fr 2fr;
-    height: 400vh;
+    display: flex;
+    flex-flow: column nowrap;
+    height: auto;
     width: 100vw;
+    gap: 200px;
 }
 
 #section-presentacion {
-    grid-row: 2;
-    
+    margin-top: 15vh;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;;
 }
 
 .texto-saludo {
+    margin: 0 10px;
     text-align: center;
     margin-bottom: 2vw;
     font-size: 30px;
@@ -56,30 +52,19 @@ main {
 }
 
 .imagen-presentacion {
-    width: 64vw;
+    width: 60%;
     height: 78vh;
-    position: relative;
-    left: 18vw;
-    
-}
-
-.texto-presentacion {
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #282828;
 }
 
 #section-proyectos {
     margin: 10px 0;
     width: 85vw;
-    grid-row: 3;
 }
 
 .titulo-proyectos {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(42, 42, 42);
-    font-size: 4vw;
+    font-size: 45px;
     margin: 0 0 80px 5vw;
 }
 
@@ -160,10 +145,9 @@ main {
     box-shadow: #225b60e3 3px 7px 5px 10px;
     margin: 0;
     display: block;
-    width: 27%;
+    width: 250px;
     height: 7%;
     font-size: 150%;
-    text-align: start;
     background-color: #9ad0c2;
     clip-path: polygon(0 0, 100% 0, 87% 200%, 13% 200%);
     align-content: center;
@@ -209,6 +193,10 @@ main {
     margin: 5px;
 }
 
+.boton-proyecto:hover {
+    filter: invert(90%);
+}
+
 .iconos-lenguajes {
     grid-row-start: 4;
     grid-column-start: 1;
@@ -221,7 +209,8 @@ main {
 
 .img-proyecto {
     margin-top: 4%;
-    height: 87%;
+    width: 60%;
+    height: 350px;
     background-size: 100% 100%;  
 }
 
@@ -262,11 +251,7 @@ main {
     background-image: url(img/aluraplay-mockup.png);
 }
 
-#section-habilidades {
-    grid-row-start: 4;    
-}
-
-#contenedor-habilidades {
+.contenedor-habilidades {
     width: 100vw;
     display: flex;
     flex-flow: column wrap;
@@ -274,10 +259,10 @@ main {
     align-items: center;
 }
 
-#titulo-habilidades {
+.titulo-habilidades, #titulo-proyectos-personales, #titulo-sobre-mi, #titulo-contacto{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(42, 42, 42);
-    font-size: 4vw;
+    font-size: 45px;
     margin: 40px 0 80px 5vw;
 }
 
@@ -308,6 +293,502 @@ main {
     height: 50px;   
 }
 
+.programas {
+    margin-top: 120px
+}
+
+#section-titulos {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#contenedor-titulos, #timeline {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 80vw;
+    margin: 50px auto 0;
+    gap: 30px;
+}
+
+.tarjeta-titulo {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    width: 250px;
+    height: 400px;
+    background-image: url(img/fondo-academico1.png);
+    background-size: cover;
+}
+
+.tarjeta-titulo:nth-of-type(2) {
+    background-image: url(img/fondo-academico2.png);
+
+}
+
+.tarjeta-titulo:nth-of-type(3) {
+    background-image: url(img/fondo-academico3.png);
+
+}
+
+.tarjeta-titulo:nth-of-type(4) {
+    background-image: url(img/fondo-academico4.png);
+
+}
+
+.tarjeta-titulo div {
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.871) 60%);
+}
+
+.tarjeta-titulo h3 {
+    color: rgb(230, 230, 230);
+    text-align: center;
+}
+
+.tarjeta-titulo h4 {
+    color: rgb(170, 170, 170);
+    text-align: center;
+}
+
+#timeline {
+    justify-content: space-evenly;
+}
+
+.timeline-circulo {
+    width: 70px;
+    height: 70px;
+    background-image: radial-gradient(rgb(168, 161, 31) , rgb(144, 239, 144));
+    border-radius: 50px;
+    text-align: center;
+    align-content: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(36, 36, 36);
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-circulo:nth-child(2) {
+    background-image: radial-gradient(rgb(56, 102, 237) , rgb(133, 255, 133));
+}
+
+.timeline-circulo:nth-child(3) {
+    background-image: radial-gradient(rgb(43, 170, 85), rgb(47, 150, 198) );
+}
+
+.timeline-circulo:nth-child(4) {
+    background-image: radial-gradient(rgb(94, 231, 94), rgb(43, 208, 208));
+}
+
+#timeline-linea {
+    width: 100%;
+    height: 20px;
+    background-image: linear-gradient(to right, transparent, rgb(168, 161, 31) , rgba(144, 239, 144, 0.786), rgb(56, 102, 237) , rgba(133, 255, 133, 0.697), rgba(43, 170, 85, 0.659), rgba(47, 150, 198, 0.747), rgba(104, 255, 104, 0.664), rgb(0, 218, 218), transparent);
+    position: relative;
+    top: -77px;
+    z-index: 0;
+}
+
+#section-proyectos-personales {
+    
+}
+
+#contenedor-proyectos-personales {
+    width: 80vw;
+    height: 280vh;
+    margin: 50px auto 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+}
+
+#contenedor-proyectos-personales h2, #sobre-mi h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 28px;
+}
+
+.titulo-proyecto-personal {
+    margin: 150px auto 70px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(42, 42, 42);
+    font-size: 32px;
+}
+
+#contenedor-imagenes-arte {
+    position: relative;
+    top: 0;
+    width: 80vw;
+    height: 500px;
+    overflow: hidden;
+}
+
+#contenedor-imagenes-arte:hover #pasarela-imagenes {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.5s, transform 0.5s;
+    
+}
+
+#contenedor-imagenes-arte:hover #imagen-estatica {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 0.5s 0.2s, transform 0.5s 0.2s ;
+}
+
+#pasarela-imagenes {
+    position: absolute;
+    top: 0;
+    width: 80vw;
+    height: 500px;
+    transition: opacity 1s, transform 1s;
+}
+
+#imagen-estatica {
+    background-image: url(img/fondo-arte.png);
+    background-position: center;
+    background-size: 900px 500px;
+    background-repeat: no-repeat;
+    width: 80vw;
+    height: 500px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.imagen-arte-digital {
+    position: absolute;
+    top: 0%;
+    width: 30vw;
+    height: 500px;
+    background-image: url(img/imagen-arte.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: mover 8.8s linear infinite;
+    opacity: 0;
+}
+
+.imagen-arte-digital:nth-child(2) {
+    animation: mover 8.8s linear 2.2s infinite;
+    background-image: url(img/imagen-arte2.png);
+}
+
+.imagen-arte-digital:nth-child(3) {
+    animation: mover 8.8s linear 4.4s infinite;
+    background-image: url(img/imagen-arte3.png);
+}
+
+.imagen-arte-digital:nth-child(4) {
+    animation: mover 8.8s linear 6.6s infinite;
+    background-image: url(img/imagen-arte4.png);
+}
+
+@keyframes mover {
+    0% {
+        transform: translateX(-50vw);
+        opacity: 0
+    }
+    40% {
+        opacity: 1;
+    }
+    75.7% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(80vw);  
+    }
+}
+#contenedor-imagenes-arte:hover #boton-instagram{
+    animation: rebotar 2s linear 0.7s;
+    opacity: 1;
+    transition: opacity 0.7s 0.7s;
+}
+
+#boton-instagram {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 3vw;
+    right: 3vw;
+    opacity: 0;
+    background-image: url(img/logo-instagram.png);
+    background-size: 150% 140%;
+    background-position: center;
+    box-shadow: black 1px 1px 4px 1px;
+    border-width: 0px;
+    border-radius: 5px;
+}
+
+@keyframes rebotar {
+    0% {
+        transform: translateY(-100%);
+    }
+    10% {
+        transform: translateY(0) translateX(-10px) rotate(-5deg);
+    }
+    20% {
+        transform: translateY(-30%) translateX(0) rotate(0);
+    }
+    30% {
+        transform: translateY(0) translateX(10px)  rotate(5deg);
+    }
+    40% {
+        transform: translateY(-5px) translateX(5px) rotate(2deg);
+    }
+    50% {
+        transform: translateY(0) translateX(0) rotate(0)
+    }
+    75% {
+        transform: rotate(0);
+    }
+    80% {
+        transform: rotate(-5deg);
+    }
+    85% {
+        transform: rotate(5deg);
+    }
+    90% {
+        transform: rotate(-5deg);
+    }
+    95% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+#boton-instagram:hover {
+    transform: scale(1.1);
+    transition: scale 1s;
+}
+
+#contenedor-videos {
+    width: 80vw;
+    height: 90vh;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.518), rgba(0, 0, 0, 0.479));
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+}
+
+iframe:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+iframe {
+    box-shadow: 0 15px 10px 1px black;
+}
+
+#boton-youtube {
+    position: absolute;
+    top: 3vw;
+    right: 3vw;
+    width: 80px;
+    height: 80px;
+    background-image: url(img/logo-youtube.png);
+    background-size: cover;
+    background-position: 120% 100%;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px 1px black;
+}
+
+#boton-youtube:hover {
+    transform: scale(1.1);
+    transition: scale 1s;
+}
+
+#sobre-mi {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+#imagen-contacto {
+    width: 350px;
+    height: 100%;
+}
+
+#contenedor-formulario {
+    width: 50%;
+}
+
+#contenedor-formulario h3 {
+    padding-left: 15px;
+}
+
+#contenedor-contacto {
+    width: 70vw;
+    height: 63vh;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+#formulario-contacto {
+    display: flex;
+    flex-flow: column wrap;
+    width: 60%;
+}
+
+.input-contacto {
+    width: 400px;
+    margin: 10px;
+    border-radius: 5px;
+    min-height: 30px;
+    padding: 5px;
+    background-color: rgba(185, 185, 185, 0.619);
+    border: 2px solid rgb(173, 173, 173);
+    resize: none;
+}
+
+#boton-enviar{
+    width: 130px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: rgba(25, 31, 33, 0.619);
+    box-shadow: rgba(0, 0, 0, 0.515) 0 0 40px, inset rgba(0, 0, 0, 0.433) 0 0 10px;
+    color: white;
+}
+
+#boton-enviar:hover {
+    cursor: pointer;
+    filter: invert(90%);
+}    
+
+footer {
+    background-color: rgb(86, 86, 86);
+}
+
+#footer {
+    height: 70px;
+    padding-top: 20px;
+    margin: 0 0 0 20px;
+}
+
+hr {
+    margin: 0;
+}
+
 @media (max-width: 500px) {
-      
+    #section-presentacion {
+        margin-top: 12vh;
+    }
+
+    .imagen-presentacion {
+        width: 100vw;
+    }
+
+    .tarjeta-proyecto {
+        height: 70vh;
+    }
+
+    .tarjeta-proyecto:hover {
+        align-items: center;
+        flex-flow: column nowrap;
+    }
+
+    .tarjeta-proyecto:hover .nombre-proyecto {
+        left: 0;
+    }
+
+
+    .descripcion-tarjeta {
+        width: 100%;
+        height: 50%;
+        margin: 0;
+    }
+
+    .img-proyecto {
+        order: 0;
+        margin: auto 0;
+        height: 70%;
+        width: 100%;
+    }
+
+    .tarjeta-proyecto:hover .img-proyecto {
+        margin: 0;
+        margin-top: 60px;
+        position: static;
+        height: 50%;
+        order: -1;
+    }
+
+    .lista-habilidades {
+        width: 90vw;
+    }
+
+    .habilidad {
+        width: auto;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    #contenedor-titulos {
+        flex-flow: column wrap;
+        height: 1700px;
+    }
+
+    #timeline {
+        flex-flow: column nowrap;
+        height: 1700px;
+        width: 50px;
+        background-image: linear-gradient(to bottom, transparent, rgb(168, 161, 31), rgba(144, 239, 144, 0.786), rgb(56, 102, 237), rgba(133, 255, 133, 0.697), rgba(43, 170, 85, 0.659), rgba(47, 150, 198, 0.747), rgba(104, 255, 104, 0.664), rgb(0, 218, 218), transparent);
+        align-items: center;
+    }
+
+    #timeline-linea {
+        display: none;
+    }
+
+    #section-proyectos-personales {
+        height: 2440px;
+    }
+
+    .imagen-arte-digital:nth-child(3) {
+        background-position: right;
+    }
+
+    #imagen-estatica {
+        background-size: 100%;
+    }
+
+    #contenedor-videos {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        gap: 5%;
+    }
+
+    iframe {
+        width: 70%;
+        height: 20%;
+    }
+
+    #contenedor-contacto {
+        width: 100%;
+        flex-flow: column;
+        align-items: center;
+        margin: 0px auto 35px;
+    }
+
+    #contenedor-formulario {
+        width: 90%;
+    }
+
+    #contenedor-contacto div:nth-child(1) {
+        display: none;
+    }
+
+    #contenedor-contacto hr {
+        display: none;
+    }
+
 }
