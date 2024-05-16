@@ -730,7 +730,7 @@ hr {
 
     .habilidad {
         width: auto;
-        font-size: 10px;
+        font-size: 50%;
         text-align: center;
     }
 
@@ -796,7 +796,7 @@ hr {
 
 }
 
-@media only screen and (max-width:320px) {
+@media only screen and (max-width:450px) {
     header {
         height: auto;
     }
@@ -814,29 +814,29 @@ hr {
     }
 
     #section-presentacion {
-        margin-top: 51.3vh;
+        margin-top: 53vh;
         height: auto;
     }
 
     .imagen-presentacion {
-        height: 200px;
+        height: 70vw;
     }
 
     .texto-saludo {
-        font-size: 16px;
+        font-size: 4vw;
     }
     
     .descripcion-tarjeta h2 {
-        font-size: 16px;
+        font-size: 4vw;
     }
 
     .boton-proyecto {
-        width: 100px;
+        width: 80%;
         font-size: 12px;
     }
 
     .boton-proyecto img{
-        width: 35px;
+        width: 30%;
     }
 
     .img-proyecto {
@@ -849,26 +849,27 @@ hr {
     }
 
     .habilidad {
+        width: 11%;
         padding: 1px;
         height: auto;
     }
 
     .logo-habilidad {
-        width: 30px;
+        width: 90%;
         height: 30px;
     }
 
     .tarjeta-titulo {
-        width: 170px;
+        width: 60vw;
         background-position: center;
     }
 
     .tarjeta-titulo div h3{
-        font-size: 16px;
+        font-size: 4vw;
     }
 
     .tarjeta-titulo div h4{
-        font-size: 12px;
+        font-size: 3.5vw;
     }
 
     #section-proyectos-personales {
@@ -876,7 +877,7 @@ hr {
     }
 
     #contenedor-proyectos-personales h2, #sobre-mi h2 {
-        font-size: 16px;
+        font-size: 4vw;
     }
 
     #section-contacto {
