@@ -29,7 +29,6 @@ main {
     background-size: 100vh;
     display: flex;
     flex-flow: column nowrap;
-    height: auto;
     width: 100vw;
     gap: 200px;
 }
@@ -388,9 +387,15 @@ main {
     z-index: 0;
 }
 
+.tarjeta-proyectos-personales {
+    display: flex;
+    flex-flow: column nowrap;
+    height: auto;
+}
+
 #contenedor-proyectos-personales {
     width: 80vw;
-    height: 280vh;
+    height: auto;
     margin: 50px auto 0;
     display: flex;
     flex-flow: column nowrap;
@@ -680,7 +685,7 @@ hr {
 
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 900px) {
     #section-presentacion {
         margin-top: 12vh;
     }
@@ -730,7 +735,7 @@ hr {
 
     .habilidad {
         width: auto;
-        font-size: 50%;
+        font-size: 60%;
         text-align: center;
     }
 
@@ -751,10 +756,6 @@ hr {
         display: none;
     }
 
-    #section-proyectos-personales {
-        height: 2440px;
-    }
-
     .imagen-arte-digital:nth-child(3) {
         background-position: right;
     }
@@ -766,12 +767,11 @@ hr {
     #contenedor-videos {
         display: flex;
         flex-flow: column;
-        justify-content: center;
-        gap: 5%;
+        justify-content: space-evenly;
     }
 
     iframe {
-        width: 70%;
+        width: 60%;
         height: 20%;
     }
 
@@ -796,7 +796,7 @@ hr {
 
 }
 
-@media only screen and (max-width:450px) {
+@media only screen and (max-width:768px) {
     header {
         height: auto;
     }
@@ -810,11 +810,11 @@ hr {
     }
 
     #banner-portafolio {
-        height: 60vh;
+        height: 100vw;
     }
 
     #section-presentacion {
-        margin-top: 53vh;
+        margin-top: 87vw;
         height: auto;
     }
 
@@ -827,25 +827,28 @@ hr {
     }
     
     .descripcion-tarjeta h2 {
-        font-size: 4vw;
+        font-size: 120%;
     }
 
     .boton-proyecto {
         width: 80%;
-        font-size: 12px;
+        max-width: 200px;
+        font-size: 80%;
+        gap: 3px;
     }
 
     .boton-proyecto img{
-        width: 30%;
+        width: 20%;
     }
 
     .img-proyecto {
-        height: 40%;
+        height: 50vw;
     }
 
     .lista-habilidades {
         width: 90vw;
-        height: 90px;
+        height: 13vw;
+        min-height: 70px;
     }
 
     .habilidad {
@@ -855,29 +858,34 @@ hr {
     }
 
     .logo-habilidad {
-        width: 90%;
-        height: 30px;
+        width: 65%;
+        height: 55%;
     }
 
     .tarjeta-titulo {
         width: 60vw;
+        max-width: 250px;
         background-position: center;
     }
 
     .tarjeta-titulo div h3{
-        font-size: 4vw;
+        font-size: large;
     }
 
     .tarjeta-titulo div h4{
-        font-size: 3.5vw;
-    }
-
-    #section-proyectos-personales {
-        height: 2242px;
+        font-size: medium;
     }
 
     #contenedor-proyectos-personales h2, #sobre-mi h2 {
         font-size: 4vw;
+    }
+
+    #contenedor-videos {
+        height: 100vw;
+    }
+
+    iframe {
+        height: 25vw;
     }
 
     #section-contacto {
@@ -906,5 +914,11 @@ hr {
 
     #footer {
         height: 85px;
+    }
+}
+
+@media only screen and (max-width:540px) {
+    .habilidad {
+        font-size: 50%;
     }
 }
