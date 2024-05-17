@@ -35,7 +35,7 @@ main {
 }
 
 #section-presentacion {
-    margin-top: 15vh;
+    margin-top: 8.3vw;
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -52,8 +52,9 @@ main {
 }
 
 .imagen-presentacion {
-    width: 60%;
+    width: 70vw;
     height: 78vh;
+    max-height: 1080px;
 }
 
 #section-proyectos {
@@ -689,14 +690,23 @@ hr {
 }
 
 @media only screen and (max-width: 1080px) {
+    .imagen-presentacion {
+        width: 80vw;
+    }
+
+    #section-presentacion {
+        margin-top: 12vw;
+    }
+
     .titulo-proyecto-personal {
         font-size: 35px;
+        text-align: center;
     }
 }
 
 @media only screen and (max-width: 900px) {
     #section-presentacion {
-        margin-top: 12vh;
+        margin-top: 15vw;
     }
 
     .imagen-presentacion {
