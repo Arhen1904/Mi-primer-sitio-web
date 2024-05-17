@@ -12,6 +12,7 @@ body{
     position: absolute;
     width: 100vw;
     height: 130vh;
+    max-height: 1080px;
     z-index: 1;
 }
 
@@ -277,10 +278,10 @@ main {
 .habilidad{
     display: flex;
     flex-flow: column wrap;
-    width: 100px;
+    width: 9vw;
     height: 100px;
     gap: 5px;
-    font-size: 20px;
+    font-size: 90%;
     justify-content: center;
     align-items: center;
     box-shadow: black 0 5px 10px, inset rgba(255, 255, 255, 0.588) 0 10px 30px, inset rgba(0, 0, 0, 0.588) 0 -10px 30px;
@@ -317,6 +318,7 @@ main {
     justify-content: flex-end;
     width: 20vw;
     max-width: 250px;
+    min-width: 220px;
     height: 400px;
     background-image: url(img/fondo-academico1.png);
     background-size: cover;
@@ -412,7 +414,7 @@ main {
     margin: 150px auto 70px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(42, 42, 42);
-    font-size: 32px;
+    font-size: 2.5vw;
 }
 
 #contenedor-imagenes-arte {
@@ -614,12 +616,16 @@ iframe {
 }
 
 #imagen-contacto {
-    width: 350px;
+    width: 30vw;
+    max-width: 350px;
     height: 100%;
 }
 
 #contenedor-formulario {
-    width: 50%;
+    width: 40%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
 }
 
 #contenedor-formulario h3 {
@@ -628,7 +634,7 @@ iframe {
 
 #contenedor-contacto {
     width: 70vw;
-    height: 63vh;
+    height: auto;
     margin: 0 auto 40px;
     display: flex;
     flex-flow: row wrap;
@@ -639,17 +645,12 @@ iframe {
 #formulario-contacto {
     display: flex;
     flex-flow: column wrap;
-    width: 60%;
-}
-
-#contenedor-formulario {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+    width: 100%;
+    align-items: center;
 }
 
 .input-contacto {
-    width: 400px;
+    width: 100%;
     margin: 10px;
     border-radius: 5px;
     min-height: 30px;
@@ -687,7 +688,11 @@ hr {
     margin: 0;
 }
 
-
+@media only screen and (max-width: 1080px) {
+    .titulo-proyecto-personal {
+        font-size: 26px;
+    }
+}
 
 @media only screen and (max-width: 900px) {
     #section-presentacion {
@@ -743,15 +748,23 @@ hr {
         text-align: center;
     }
 
+    #section-titulos{
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
     #contenedor-titulos {
         flex-flow: column wrap;
         height: 1700px;
+        width: 40vw;
+        margin: 10px;
     }
 
     #timeline {
         flex-flow: column nowrap;
         height: 1700px;
-        width: 50px;
+        width: 40px;
         background-image: linear-gradient(to bottom, transparent, rgb(168, 161, 31), rgba(144, 239, 144, 0.786), rgb(56, 102, 237), rgba(133, 255, 133, 0.697), rgba(43, 170, 85, 0.659), rgba(47, 150, 198, 0.747), rgba(104, 255, 104, 0.664), rgb(0, 218, 218), transparent);
         align-items: center;
     }
@@ -869,6 +882,7 @@ hr {
     .tarjeta-titulo {
         width: 60vw;
         max-width: 250px;
+        min-width: 10px;
         background-position: center;
     }
 
