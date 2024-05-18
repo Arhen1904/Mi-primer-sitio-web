@@ -759,9 +759,10 @@ hr {
     }
 
     #section-titulos{
-        flex-flow: row wrap;
-        justify-content: center;
+        flex-flow: row nowrap;
         gap: 20px;
+        width: 100vw;
+        justify-content: space-around;
     }
 
     #contenedor-titulos {
