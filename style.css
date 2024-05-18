@@ -1,9 +1,9 @@
-
-
 body, html{
     margin: 0;
     padding: 0;
     min-height: 100dvh;
+    min-width: 100dvw;
+    box-sizing: border-box;
 }
 
 #principal {
@@ -681,6 +681,9 @@ iframe {
 
 footer {
     background-color: rgb(86, 86, 86);
+    margin: 0;
+    padding: 0;
+    width: 100dvw;
 }
 
 #footer {
