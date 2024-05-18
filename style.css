@@ -1,8 +1,8 @@
 body, html{
     margin: 0;
     padding: 0;
-    min-height: 100dvh;
-    min-width: 100dvw;
+    min-height: 100svh;
+    min-width: 100svw;
     box-sizing: border-box;
 }
 
@@ -21,8 +21,8 @@ body, html{
 }
 
 header{
-    width: 100dvw;
-    height: 100dvh;
+    width: 100svw;
+    height: 100svh;
     background: linear-gradient(rgb(215, 215, 215) 65%, rgb(136, 136, 136));
     background-attachment: fixed;
 }
