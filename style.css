@@ -31,7 +31,6 @@ main {
     margin: 0;
     background: linear-gradient(rgb(215, 215, 215) 65%, rgb(136, 136, 136));
     background-attachment: fixed;
-    background-size: 100svh;
     display: flex;
     flex-flow: column nowrap;
     width: 100vw;
