@@ -20,7 +20,7 @@ body, html{
     z-index: 1;
 }
 
-header{
+header {
     width: 100svw;
     height: 100svh;
     background: linear-gradient(rgb(215, 215, 215) 65%, rgb(136, 136, 136));
