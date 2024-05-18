@@ -833,10 +833,12 @@ hr {
 @media only screen and (max-width:768px) {
     header {
         height: auto;
+        background-attachment: scroll;
     }
 
     main {
         gap: 100px;
+        background-attachment: scroll;
     }
 
     #principal {
