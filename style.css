@@ -1,8 +1,18 @@
+/* Variables de colores */
+:root {
+    --color-gris-claro: rgb(215, 215, 215);
+    --color-gris-medio: rgba(110, 110, 110, 0.336);
+    --color-negro: rgb(42, 42, 42);
+    --color-negro-oscuro: rgba(0, 0, 0, 0.433);
+    --color-boton: rgba(25, 31, 33, 0.619);
+    --color-boton-hover: rgba(0, 0, 0, 0.515);
+}
+/* Estilos generales */
 body, html{
     margin: 0;
     padding: 0;
-    min-height: 100svh;
-    min-width: 100svw;
+    min-height: 100vh;
+    min-width: 100vw;
     scroll-behavior: smooth;
 }
 
@@ -10,6 +20,7 @@ body, html{
     margin: 0 auto;
     width: 100vw;
     height: 115vh;
+    
 }
 
 #banner-portafolio {
@@ -23,13 +34,13 @@ body, html{
 header {
     width: 100svw;
     height: 100svh;
-    background: linear-gradient(rgb(215, 215, 215) 65%, rgb(136, 136, 136));
+    background: linear-gradient(var(--color-gris-claro) 65%, rgb(136, 136, 136));
     background-attachment: fixed;
 }
 
 main {
     margin: 0;
-    background: linear-gradient(rgb(215, 215, 215) 45%, rgb(61, 61, 61));
+    background: linear-gradient(var(--color-gris-claro) 45%, rgb(61, 61, 61));
     background-attachment: fixed;
     display: flex;
     flex-flow: column nowrap;
@@ -42,7 +53,7 @@ main {
     height: 90vh;
     display: flex;
     flex-direction: column;
-    align-items: center;;
+    align-items: center;
 }
 
 .texto-saludo {
@@ -67,7 +78,7 @@ main {
 
 .titulo-proyectos {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(42, 42, 42);
+    color: var(--color-negro);
     font-size: 45px;
     margin: 0 0 80px 5vw;
 }
@@ -86,7 +97,7 @@ main {
     text-align: center;
     width: 80vw;
     height: 400px;
-    background-color: rgba(110, 110, 110, 0.336);
+    background-color: var(--color-gris-medio);
     border: none;
     box-shadow: inset rgba(255, 255, 255, 0.423) 0px 0px 15px 1px;
     flex-flow: row nowrap;
@@ -96,18 +107,6 @@ main {
     animation: aparecer ease-out both;
     animation-timeline: view();
     animation-range: entry 20% cover 30%;
-}
-
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        scale: 0.5;
-    }
-
-    to {
-        opacity: 1;
-        scale: 1;
-    }
 }
 
 .tarjeta-proyecto:hover {
@@ -135,7 +134,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(110, 110, 110, 0.336);
+    background-color: var(--color-gris-medio);
     opacity: 0;
     z-index: -1;
     transition: all ease-out 0.5s;
@@ -200,14 +199,14 @@ main {
     flex-flow: column wrap;
     width: 170px;
     height: 100px;
-    background-color: rgba(25, 31, 33, 0.619);
+    background-color: var(--color-boton);
     text-decoration: none;
     color: white;
     align-items: center;
     justify-content: center;
     grid-row-start: 3;
     font-size: 15px;
-    box-shadow: rgba(0, 0, 0, 0.515) 0 0 40px, inset rgba(0, 0, 0, 0.433) 0 0 10px;
+    box-shadow: var(--color-boton-hover) 0 0 40px, inset var(--color-negro-oscuro) 0 0 10px;
     border-radius: 5px;
     margin: 5px;
 }
@@ -242,32 +241,32 @@ main {
 }
 
 .desencriptador {
-    background-image: url('img/desencriptador-screenshot.png');
+    background-image: url(https://i.ibb.co/5cfbt2Q/desencriptador-screenshot.png);
     width: 50%;
 }
 
 .tarjeta-proyecto:hover .desencriptador {
-    background-image: url(img/desencriptador-mockup.png);
+    background-image: url(https://i.ibb.co/5MMqPVq/desencriptador-mockup.png);
 }
 
 .pagina-inicio {
-    background-image: url('img/pag-inicio-screenshot.png');
+    background-image: url(https://i.ibb.co/ZHkc29M/pag-inicio-screenshot.png);
     width: 65%;
 
 }
 
 .tarjeta-proyecto:hover .pagina-inicio {
-    background-image: url(img/pag-inicio-mockup.png);
+    background-image: url(https://i.ibb.co/TWwvRq0/pag-inicio-mockup.png);
 }
 
 .aluraplay {
-    background-image: url('img/aluraplay-screenshot.png');
+    background-image: url(https://i.ibb.co/6vF5C5d/aluraplay-screenshot.png);
     width: 75%;
 
 }
 
 .tarjeta-proyecto:hover .aluraplay {
-    background-image: url(img/aluraplay-mockup.png);
+    background-image: url(https://i.ibb.co/87KqKw7/aluraplay-mockup.png);
 }
 
 .contenedor-habilidades {
@@ -281,24 +280,12 @@ main {
 
 .titulo-habilidades, #titulo-proyectos-personales, #titulo-sobre-mi, #titulo-contacto{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(42, 42, 42);
+    color: var(--color-negro);
     font-size: 45px;
     margin: 40px 0 80px 5vw;
     animation: moverDerecha ease-out both;
     animation-timeline: view();
     animation-range: entry 50% cover 50%;
-}
-
-@keyframes moverDerecha{
-    from {
-        transform: translateX(-10%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
 }
 
 .lista-habilidades {
@@ -311,18 +298,6 @@ main {
     animation: moverIzquierda ease-out both;
     animation-timeline: view();
     animation-range: entry 20% cover 30%;
-}
-
-@keyframes moverIzquierda{
-    from {
-        transform: translateX(10%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
 }
 
 .habilidad{
@@ -370,23 +345,23 @@ main {
     max-width: 250px;
     min-width: 220px;
     height: 400px;
-    background-image: url(img/fondo-academico1.png);
+    background-image: url(https://i.ibb.co/wCYgmzd/fondo-academico1.png);
     background-size: cover;
     background-position: center;
 }
 
 .tarjeta-titulo:nth-of-type(2) {
-    background-image: url(img/fondo-academico2.png);
+    background-image: url(https://i.ibb.co/bLhgsws/fondo-academico2.png);
 
 }
 
 .tarjeta-titulo:nth-of-type(3) {
-    background-image: url(img/fondo-academico3.png);
+    background-image: url(https://i.ibb.co/GWRDh9H/fondo-academico3.png);
 
 }
 
 .tarjeta-titulo:nth-of-type(4) {
-    background-image: url(img/fondo-academico4.png);
+    background-image: url(https://i.ibb.co/bLvSfMF/fondo-academico4.png);
 
 }
 
@@ -463,22 +438,10 @@ main {
     animation-range: entry 40% cover 50%;
 }
 
-@keyframes moverArriba {
-    from {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: rotateY(0);
-        opacity: 1;
-    }
-}
-
 .titulo-proyecto-personal {
     margin: 150px auto 70px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(42, 42, 42);
+    color: var(--color-negro);
     font-size: 40px;
 }
 
@@ -512,7 +475,7 @@ main {
 }
 
 #imagen-estatica {
-    background-image: url(img/fondo-arte.png);
+    background-image: url(https://i.ibb.co/4ZBCHz0/fondo-arte.png);
     background-position: center;
     background-size: 900px 500px;
     background-repeat: no-repeat;
@@ -528,7 +491,7 @@ main {
     top: 0%;
     width: 30vw;
     height: 500px;
-    background-image: url(img/imagen-arte.png);
+    background-image: url(https://i.ibb.co/P9gwkFf/imagen-arte.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -538,34 +501,19 @@ main {
 
 .imagen-arte-digital:nth-child(2) {
     animation: mover 8.8s linear 2.2s infinite;
-    background-image: url(img/imagen-arte2.png);
+    background-image: url(https://i.ibb.co/Nt2qHSS/imagen-arte2.jpg);
 }
 
 .imagen-arte-digital:nth-child(3) {
     animation: mover 8.8s linear 4.4s infinite;
-    background-image: url(img/imagen-arte3.png);
+    background-image: url(https://i.ibb.co/hs7TsZB/imagen-arte3.jpg);
 }
 
 .imagen-arte-digital:nth-child(4) {
     animation: mover 8.8s linear 6.6s infinite;
-    background-image: url(img/imagen-arte4.png);
+    background-image: url(https://i.ibb.co/D1jcs60/imagen-arte4.jpg);
 }
 
-@keyframes mover {
-    0% {
-        transform: translateX(-50vw);
-        opacity: 0
-    }
-    40% {
-        opacity: 1;
-    }
-    75.7% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(80vw);  
-    }
-}
 #contenedor-imagenes-arte:hover #boton-instagram{
     animation: rebotar 2s linear 0.7s;
     opacity: 1;
@@ -579,51 +527,12 @@ main {
     top: 3vw;
     right: 3vw;
     opacity: 0;
-    background-image: url(img/logo-instagram.png);
+    background-image: url(https://i.ibb.co/r25hdXs/logo-instagram.png);
     background-size: 150% 140%;
     background-position: center;
     box-shadow: black 1px 1px 4px 1px;
     border-width: 0px;
     border-radius: 5px;
-}
-
-@keyframes rebotar {
-    0% {
-        transform: translateY(-100%);
-    }
-    10% {
-        transform: translateY(0) translateX(-10px) rotate(-5deg);
-    }
-    20% {
-        transform: translateY(-30%) translateX(0) rotate(0);
-    }
-    30% {
-        transform: translateY(0) translateX(10px)  rotate(5deg);
-    }
-    40% {
-        transform: translateY(-5px) translateX(5px) rotate(2deg);
-    }
-    50% {
-        transform: translateY(0) translateX(0) rotate(0)
-    }
-    75% {
-        transform: rotate(0);
-    }
-    80% {
-        transform: rotate(-5deg);
-    }
-    85% {
-        transform: rotate(5deg);
-    }
-    90% {
-        transform: rotate(-5deg);
-    }
-    95% {
-        transform: rotate(5deg);
-    }
-    100% {
-        transform: rotate(0);
-    }
 }
 
 #boton-instagram:hover {
@@ -666,7 +575,7 @@ iframe {
     right: 3vw;
     width: 80px;
     height: 80px;
-    background-image: url(img/logo-youtube.png);
+    background-image: url(https://i.ibb.co/KsTgfKw/logo-youtube.png);
     background-size: cover;
     background-position: 120% 100%;
     border-radius: 50%;
@@ -732,8 +641,8 @@ iframe {
     width: 130px;
     height: 40px;
     border-radius: 5px;
-    background-color: rgba(25, 31, 33, 0.619);
-    box-shadow: rgba(0, 0, 0, 0.515) 0 0 40px, inset rgba(0, 0, 0, 0.433) 0 0 10px;
+    background-color: var(--color-boton);
+    box-shadow: var(--color-boton-hover) 0 0 40px, inset var(--color-negro-oscuro) 0 0 10px;
     color: white;
 }
 
@@ -758,7 +667,110 @@ footer {
 hr {
     margin: 0;
 }
+/* Animaciones */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
 
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes moverDerecha{
+    from {
+        transform: translateX(-10%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moverIzquierda{
+    from {
+        transform: translateX(10%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moverArriba {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: rotateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes mover {
+    0% {
+        transform: translateX(-50vw);
+        opacity: 0
+    }
+    40% {
+        opacity: 1;
+    }
+    75.7% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(80vw);  
+    }
+}
+
+@keyframes rebotar {
+    0% {
+        transform: translateY(-100%);
+    }
+    10% {
+        transform: translateY(0) translateX(-10px) rotate(-5deg);
+    }
+    20% {
+        transform: translateY(-30%) translateX(0) rotate(0);
+    }
+    30% {
+        transform: translateY(0) translateX(10px)  rotate(5deg);
+    }
+    40% {
+        transform: translateY(-5px) translateX(5px) rotate(2deg);
+    }
+    50% {
+        transform: translateY(0) translateX(0) rotate(0)
+    }
+    75% {
+        transform: rotate(0);
+    }
+    80% {
+        transform: rotate(-5deg);
+    }
+    85% {
+        transform: rotate(5deg);
+    }
+    90% {
+        transform: rotate(-5deg);
+    }
+    95% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+/* Media queries */
 @media only screen and (max-width: 1080px) {
     .titulo-proyecto-personal {
         font-size: 35px;
