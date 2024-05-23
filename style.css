@@ -322,6 +322,10 @@ main {
     margin-top: 120px
 }
 
+.academicas {
+    margin: 40px 0 -200px 5vw;
+}
+
 #section-titulos {
     display: flex;
     flex-flow: column nowrap;
@@ -543,7 +547,6 @@ main {
 #contenedor-videos {
     width: 80vw;
     height: 90vh;
-    margin: 50px auto 0;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -955,6 +958,10 @@ hr {
 
     .img-proyecto {
         height: 50vw;
+    }
+
+    .academicas {
+        margin: 40px 0 -100px 5vw;
     }
 
     .lista-habilidades {
