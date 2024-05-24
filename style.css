@@ -34,7 +34,7 @@ body, html{
 header {
     width: 100svw;
     height: 100svh;
-    background: linear-gradient(var(--color-gris-claro) 65%, rgb(136, 136, 136));
+    background: linear-gradient(var(--color-gris-claro) 45%, rgb(61, 61, 61));
     background-attachment: fixed;
 }
 
@@ -670,6 +670,7 @@ footer {
 hr {
     margin: 0;
 }
+
 /* Animaciones */
 @keyframes aparecer {
     from {
@@ -697,7 +698,7 @@ hr {
 
 @keyframes moverIzquierda{
     from {
-        transform: translateX(10%);
+        transform: translateX(10vw);
         opacity: 0;
     }
 
