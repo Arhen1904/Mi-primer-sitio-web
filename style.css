@@ -219,7 +219,6 @@ main {
 }
 
 .tarjeta-proyecto:hover .img-proyecto {
-    width: 60%;
     height: 100%;
     position: relative;
     top: -70px;
@@ -531,8 +530,7 @@ main {
 }
 
 #contenedor-videos {
-    width: 80vw;
-    height: 90vh;
+    width: 60vw;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -541,6 +539,8 @@ main {
     background-image: linear-gradient(rgba(255, 255, 255, 0.518), rgba(0, 0, 0, 0.479));
     border-radius: 20px;
     backdrop-filter: blur(20px);
+    padding: 5vw;
+    gap: 3vw;
 }
 
 iframe:nth-child(2) {
@@ -549,9 +549,8 @@ iframe:nth-child(2) {
 }
 
 iframe {
-    width: 85%;
-    max-width: 460px;
-    height: 70%;
+    width: 30vw;
+    height: 18vw;
     box-shadow: 0 15px 10px 1px black;
     animation: aparecer ease-out both;
     animation-timeline: view();
@@ -796,7 +795,6 @@ hr {
         order: 0;
         margin: auto 0;
         height: 70%;
-        width: 100%;
     }
 
     .tarjeta-proyecto:hover .img-proyecto {
@@ -909,10 +907,6 @@ hr {
 
     .boton-proyecto img{
         width: 20%;
-    }
-
-    .img-proyecto {
-        height: 50vw;
     }
 
     .academicas {
