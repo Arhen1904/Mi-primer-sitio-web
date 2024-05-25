@@ -11,37 +11,27 @@
 body, html{
     margin: 0;
     padding: 0;
-    max-height: 100vh;
     max-width: 100vw;
     scroll-behavior: smooth;
 }
 
 #principal {
-    margin: 0 auto;
-    width: 100vw;
-    height: 115vh;
-    
+    width: 100vw;  
 }
 
 #banner-portafolio {
-    position: absolute;
+    position: relative;
     width: 100vw;
-    height: 130vh;
-    max-height: 1080px;
-    z-index: 1;
 }
 
 header {
-    width: 100svw;
-    height: 100svh;
-    background: linear-gradient(var(--color-gris-claro) 45%, rgb(61, 61, 61));
-    background-attachment: fixed;
+    width: 100vw;
+    background-color: var(--color-gris-claro); 
 }
 
 main {
     margin: 0;
     background: linear-gradient(var(--color-gris-claro) 45%, rgb(61, 61, 61));
-    background-attachment: fixed;
     display: flex;
     flex-flow: column nowrap;
     width: 100vw;
@@ -49,26 +39,22 @@ main {
 }
 
 #section-presentacion {
-    margin-top: 8.3vw;
-    height: 90vh;
+    margin-top:-9vw;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .texto-saludo {
-    margin: 0 10px;
+    margin: 0 10px 2vw;
     text-align: center;
-    margin-bottom: 2vw;
-    font-size: 30px;
+    font-size: 3vw;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #282828;
 }
 
 .imagen-presentacion {
     width: 70vw;
-    height: 78vh;
-    max-height: 1080px;
 }
 
 #section-proyectos {
@@ -780,10 +766,6 @@ hr {
         font-size: 35px;
     }
 
-    #section-presentacion {
-        margin-top: 12vw;
-    }
-
     .titulo-proyecto-personal {
         font-size: 35px;
         text-align: center;
@@ -791,14 +773,6 @@ hr {
 }
 
 @media only screen and (max-width: 900px) {
-    #section-presentacion {
-        margin-top: 15vw;
-    }
-
-    .imagen-presentacion {
-        width: 100vw;
-    }
-
     .tarjeta-proyecto {
         height: 70vh;
     }
@@ -811,7 +785,6 @@ hr {
     .tarjeta-proyecto:hover .nombre-proyecto {
         left: 0;
     }
-
 
     .descripcion-tarjeta {
         width: 100%;
@@ -913,33 +886,14 @@ hr {
 @media only screen and (max-width:768px) {
     header {
         height: auto;
-        background-attachment: scroll;
     }
 
     main {
         gap: 100px;
-        background-attachment: scroll;
     }
 
     #principal {
         height: auto;
-    }
-
-    #banner-portafolio {
-        height: 100vw;
-    }
-
-    #section-presentacion {
-        margin-top: 87vw;
-        height: auto;
-    }
-
-    .imagen-presentacion {
-        height: 70vw;
-    }
-
-    .texto-saludo {
-        font-size: 4vw;
     }
     
     .descripcion-tarjeta h2 {
